@@ -61,31 +61,31 @@ $(document).ready(function() {
 		menuTop();
 	});
 	
-	var myMap;
-	ymaps.ready(init);
-	function init () {
-		myMap = new ymaps.Map('map', {
-			center: [55.770579, 37.6959459],
-			zoom: 12,
-			controls: []
-		}),
-		myMap.behaviors
-			.disable(['rightMouseButtonMagnifier' , 'scrollZoom'])
-			myPlacemark = new ymaps.Placemark([55.770579, 37.6559459], {
-				hintContent: [
-				''
-			].join(''),
-				balloonContentBody: [
-				'<div class=\'map_holder\'><div class=\'map_header\'><p>Контакты</p><\/div><div class=\'map_address\'><div class=\'icon\'><\/div><p>пл. Свободы, 2г. Москва, Рязанский проспект д 2/23</p><\/div><div class=\'map_phone\'><div class=\'icon\'><\/div><p><strong>8 (495) 105-95-03</strong></p><p><strong>8 (800) 505-16-03</strong></p><p>(Бесплатно по Росиии)</p><\/div><div class=\'map_date\'><div class=\'icon\'><\/div><p>Пн-Пт с 08:00 до 17:00</p><\/div><div class=\'map_mail\'><div class=\'icon\'><\/div><p><a href="mailto:shop@wood-game.ru">shop@wood-game.ru</a></p><\/div><\/div>'
-			].join('')
-			}, {
-				iconLayout: 'default#image',
-				iconImageHref: 'assets/img/pick-map.png',
-				iconImageSize: [102, 91],
-				iconImageOffset: [-38, -91]
-			});
-		myMap.geoObjects.add(myPlacemark);
-	}
+	// var myMap;
+	// ymaps.ready(init);
+	// function init () {
+	// 	myMap = new ymaps.Map('map', {
+	// 		center: [55.770579, 37.6959459],
+	// 		zoom: 12,
+	// 		controls: []
+	// 	}),
+	// 	myMap.behaviors
+	// 		.disable(['rightMouseButtonMagnifier' , 'scrollZoom'])
+	// 		myPlacemark = new ymaps.Placemark([55.770579, 37.6559459], {
+	// 			hintContent: [
+	// 			''
+	// 		].join(''),
+	// 			balloonContentBody: [
+	// 			'<div class=\'map_holder\'><div class=\'map_header\'><p>Контакты</p><\/div><div class=\'map_address\'><div class=\'icon\'><\/div><p>пл. Свободы, 2г. Москва, Рязанский проспект д 2/23</p><\/div><div class=\'map_phone\'><div class=\'icon\'><\/div><p><strong>8 (495) 105-95-03</strong></p><p><strong>8 (800) 505-16-03</strong></p><p>(Бесплатно по Росиии)</p><\/div><div class=\'map_date\'><div class=\'icon\'><\/div><p>Пн-Пт с 08:00 до 17:00</p><\/div><div class=\'map_mail\'><div class=\'icon\'><\/div><p><a href="mailto:shop@wood-game.ru">shop@wood-game.ru</a></p><\/div><\/div>'
+	// 		].join('')
+	// 		}, {
+	// 			iconLayout: 'default#image',
+	// 			iconImageHref: 'assets/img/pick-map.png',
+	// 			iconImageSize: [102, 91],
+	// 			iconImageOffset: [-38, -91]
+	// 		});
+	// 	myMap.geoObjects.add(myPlacemark);
+	// }
 });
 
 
