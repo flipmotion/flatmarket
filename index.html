@@ -8,6 +8,7 @@
 	<link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 	<link href='assets/css/style.min.css' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/form.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -18,7 +19,7 @@
 <body >
 	<div class="sticky-page">
 		<section class="header">
-			<button type="button" class="toggle-button visible-xs "></button>
+			
 			<section class="header-lvl-1">
 				<div class="container">
 					<div class="row">
@@ -33,18 +34,18 @@
 						</div>
 						<div class="col-xs-12 col-md-4 col-sm-4 text-right">
 							<div class="call">
-								<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#call4">Скачать договор</a>
+								<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#call-modal3">Скачать договор</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-md-3 col-sm-3 text-right">
 							<p class="phone"><a href="tel:+7 (926) 000 00 00">+7 (926) 000 00 00</a></p>
-							<div><a href="#" class="my-link-call" data-toggle="modal" data-target="#call4">Заказать обратный звонок</a></div>
+							<div><a href="#" class="my-link-call" data-toggle="modal" data-target="#call-modal">Заказать обратный звонок</a></div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<section class="header-lvl-2 visible-xs">
-				<nav class="my-navigation">
+				<nav class="my-navigation" data-item="offcanvas-menu">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 col-md-12 col-sm-12">
@@ -77,12 +78,18 @@
 										<a href="#block12" class="smooth">Контакты</a>
 									</li>
 								</ul>
+								<div><img src="assets/img/menu-call.png" alt=""></div>
+								<div class="text-center text-rwd">
+									<p>Появились вопросы?</p>
+									<p>Звоните!</p>
+									<p><a href="tel:+7 926 000 00 00">+7 926 000 00 00</a></p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</nav>
 				<div class="my-toggle-button">
-					<button type="button" class="my-toggle btn btn-default">
+					<button type="button" class="my-toggle btn btn-default visible-xs my-offcanvas-trigger">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -92,8 +99,8 @@
 			</section>
 		</section>
 		
-		<section class="content block-1" id="block1">
-			<div class="container">
+		<section class="content block-1 switch-1" id="block1">
+			<div class="container switch-1">
 				<div class="row">
 					<div class="col-xs-12 col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1 text-center">
 						<h2>Оставьте заявку, чтобы официально трудоустроиться в онлайн-офис в сфере недвижимости с зарплатой от 30 000 рублей + бонусы</h2>
@@ -101,7 +108,7 @@
 						<p class="subtitle">Расширяемся: наберем всего 50 человек</p>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row hidden-xs">
 					<div class="col-xs-12 col-md-12 col-sm-12 text-center">
 						<div class="my-flex">
 							<div>
@@ -137,6 +144,40 @@
 						</div>
 					</div>
 				</div>
+				<div class="row visible-xs">
+					<div class="col-xs-12 col-md-12 col-sm-12 text-center">
+						<div class="my-table">
+							
+							<div class="item">
+								<div><img src="assets/img/block-1-item-1.png" alt=""></div>
+								<div><p>Официальное оформление</p></div>
+							</div>
+						
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-2.png" alt=""></div>
+								<div><p>Расскажем нюансы об отчислении налогов в бюджет</p></div>
+							</div>
+						
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-3.png" alt=""></div>
+								<div><p>Бесплатное обучение и свободный график</p></div>
+							</div>
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-4.png" alt=""></div>
+								<div><p>Неограниченный размер дохода</p></div>
+							</div>
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-5.png" alt=""></div>
+								<div><p>Неважен пол и возраст</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-sm-12 col-md-offset-2">
 						<form class="form-send" data-toggle="validator" action="hendler.php" method="post" role="form" data-form="send">
@@ -198,6 +239,110 @@
 						</form>
 					</div>
 				</div>
+			</div>
+			<div class="container switch-2">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1 text-center">
+						<h2>Оставьте заявку, чтобы официально трудоустроиться в онлайн-офис в сфере недвижимости с зарплатой от 30 000 рублей + бонусы</h2>
+						<hr>
+						<p class="subtitle">Расширяемся: наберем всего 50 человек</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-sm-8 text-center">
+						<div class="my-table">
+							
+							<div class="item">
+								<div><img src="assets/img/block-1-item-1.png" alt=""></div>
+								<div><p>Официальное оформление</p></div>
+							</div>
+						
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-2.png" alt=""></div>
+								<div><p>Расскажем нюансы об отчислении налогов в бюджет</p></div>
+							</div>
+						
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-3.png" alt=""></div>
+								<div><p>Бесплатное обучение и свободный график</p></div>
+							</div>
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-4.png" alt=""></div>
+								<div><p>Неограниченный размер дохода</p></div>
+							</div>
+						
+							<div class="item">
+								<div><img src="assets/img/block-1-item-5.png" alt=""></div>
+								<div><p>Неважен пол и возраст</p></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4 col-sm-4">
+						<form class="form-send" data-toggle="validator" action="hendler.php" method="post" role="form" data-form="send">
+							<div class="form-group m-bot">
+								<div class="row">
+									<div class="col-xs-12">
+										<h2 class="text-uppercase text-center">Оставьте заявку на консультацию</h2>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="subtitle text-center">чтобы узнать, понадобится ли вам предварительное БЕСПЛАТНОЕ обучение
+или вы сразу можете приступить к работе</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-sm-12">
+									<div class="form-group m-bot">
+										<div class="row">
+											<div class="col-xs-12 col-md-12 col-sm-12">
+												<input type="text" name="user" class="form-control my-input user" placeholder="Введите ваше имя" required/>
+											</div>
+											<div class="col-xs-12">
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-md-12 col-sm-12">
+									<div class="form-group m-bot">
+										<div class="row">
+											<div class="col-xs-12 col-md-12 col-sm-12">
+												<input type="text" data-mask="phone" name="phone" class="form-control my-input phone" placeholder="Введите телефон" required/>
+											</div>
+											<div class="col-xs-12">
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-md-12 col-sm-12">
+									<div class="form-group m-bot">
+										<div class="row">
+											<div class="col-xs-12 col-md-12 col-sm-12">
+												<button type="submit" class="btn btn-primary my-btn-second" value="block-1" name="from">Получить работу</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-sm-12 text-right">
+									<p class="attantion">Осталось мест: 32</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+				
 			</div>
 		</section>
 		
@@ -502,7 +647,9 @@
 						<div class="item">
 							<img src="assets/img/block-8-item-1.png" alt="">
 							<p>Вы оставляете заявку, наш менеджер<br>связывается с вами</p>
-							<div><a href="#" class="btn btn-success" data-toggle="modal" data-target="#call4">Заказать звонок</a></div>
+							<div>
+							<a href="#" class="btn btn-success" data-toggle="modal" data-target="#call-modal">Заказать звонок</a>
+							</div>
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-4 col-sm-4 text-center">
@@ -579,7 +726,7 @@
 								<p><img src="assets/img/block-9-item-6.jpg" alt=""><span>и многие другие подробные мануалы, о существовании которых<br>вы и не догадывались.</span></p>
 							</li>
 						</ul>
-						<div><a href="#" class="btn btn-success" data-toggle="modal" data-target="#call4">Заказать звонок</a></div>
+						<div><a href="#" class="btn btn-success" data-toggle="modal" data-target="#call-modal">Заказать звонок</a></div>
 					</div>
 					<div class="col-xs-12 col-md-6 col-sm-6">
 						<div class="item">
@@ -700,7 +847,7 @@
 					<div class="col-xs-12 col-md-12 col-sm-12 text-center">
 						<p class="subtitle">Хотите так же или лучше?</p>
 						<p class="subtitle">Оставьте заявку прямо сейчас!</p>
-						<div><a href="#" class="btn btn-success" data-toggle="modal" data-target="#call4">Заказать звонок</a></div>
+						<div><a href="#" class="btn btn-success" data-toggle="modal" data-target="#call-modal">Заказать звонок</a></div>
 					</div>
 				</div>
 			</div>
@@ -739,14 +886,15 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-md-12 col-sm-12">
-						<img src="assets/img/block-12-item-1.jpg" class="full-width" alt="">
+						<img src="assets/img/block-12-item-1.jpg" class="full-width hidden-xs" alt="">
+						<img src="assets/img/block-12-item-1-rwd.jpg" class="full-width visible-xs" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
 		<!--see this block-->
 		<section class="content block-13" id="block13">
-			<div class="container">
+			<div class="container hidden-xs">
 				<div class="row text-center">
 					<div class="col-xs-12 col-md-12 col-sm-12">
 						<h2 class="text-uppercase">10 ВЕСКИХ ПРИЧИН</h2>
@@ -803,8 +951,81 @@
 					</div>
 				</div>
 			</div>
+			<div class="container visible-xs">
+				<div class="row text-center">
+					<div class="col-xs-12 col-md-12 col-sm-12">
+						<h2 class="text-uppercase">10 ВЕСКИХ ПРИЧИН</h2>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-4 col-sm-4">
+						<div class="item">
+							<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div>
+								<h3>Без ограничений</h3>
+								<p>Ваш пол, возраст, образование, состояние здоровья, наличие или отсутствие опыта не имеют значения!</p>
+							</div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div><h3>Бесплатное обучение</h3>
+							<p>Все рабочие и обучающие материалы предоставляются нашим сотрудникам абсолютно бесплатно</p></div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div><h3>Возможности для бизнеса</h3>
+							<p>Узнав данный бизнес изнутри, вы сможете с легкостью организовать собственное дело</p></div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div><h3>Полезные связи</h3>
+							<p>В рамках работы вы будете контактировать с полезными во всех отношениях людьми, которые могут оказывать вам поддержку</p></div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div><h3>Перспективы карьерного роста</h3>
+							<p>Все в ваших руках — вы можете добиться любых поставленных целей</p></div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div><h3>Работа из дома</h3>
+							<p>Вам не придется ездить каждый день на работу и обратно</p></div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+						<div>
+							<h3>Свободный график</h3>
+							<p>Вы сами решаете, когда приступать к работе и когда ее заканчивать</p></div>
+						</div>
+						<div class="item">
+							<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div>
+								<h3>Официальное трудоустройство</h3>
+								<p>Вы заключаете с нами официальный договор в соответствии с законными нормативами</p>
+							</div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+							<div><h3>Высокие доходы</h3>
+							<p>Уровень заработков наших сотрудников не ограничен и в несколько раз выше, чем средняя зарплата в регионах</p></div>
+						</div>
+						<div class="item">
+						<div><img src="assets/img/block-13-item-1-rwd.png" alt=""></div>
+						<div><h3>Решение жилищного вопроса</h3>
+							<p>Один из бонусов — вы сможете приобрести для себя лучшую квартиру в регионе с хорошей скидкой</p></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-4 col-sm-4 text-center">
+					<h2 class="text-uppercase">10 ВЕСКИХ ПРИЧИН</h2>
+						<div><a href="#" class="btn btn-success" data-toggle="modal" data-target="#call-modal">Заказать звонок</a></div>
+					</div>
+				</div>
+			</div>
 		</section><!--see this block-->
-
+		
 		<section class="content block-14" id="block14">
 			<div class="container">
 				<div class="row">
@@ -950,40 +1171,23 @@
 	</section>
 </body>
 
-<div class="modal fade call-modal" id="call" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-sm">
+
+
+<div class="modal fade call-modal" id="call-modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-body">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-				<h2>Задать вопрос</h2>
+				<h2>СКАЧАТЬ ДОГОВОР</h2>
+				<hr>
 				<h3>
-					Заполните форму, чтобы наш специалист ответил на ваш вопрос 
+					Введите адрес электронной почты и мы вышлем вам догор
 				</h3>
 				<form class="form-send" data-delay="999999999" action="hendler.php" method="post" role="form" data-form="send">
 					<div class="form-group">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
-								<input type="text" name="user" class="form-control my-input user" placeholder="Как вас зовут?" required/>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-12">
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12">
-								<input type="email" name="phone" class="form-control my-input email" placeholder="E-mail" required/>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-12">
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12">
-								<textarea type="text" name="msg" class="form-control my-input msg" placeholder="Текст вопроса" resize="none" rows="5"></textarea>
+								<input type="email" name="mail" class="form-control my-input email" placeholder="Ваш e-mail" required/>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-12">
 								<div class="help-block with-errors"></div>
@@ -993,7 +1197,96 @@
 					<div class="form-group">
 						<div class="row">
 							<div class="col-xs-12 text-center">
-								<button type="submit" class="btn btn-success" name="from">задать вопрос</button>
+								<button type="submit" id="dog" class="btn btn-success" name="from">Получить договор</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade call-modal" id="call-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				<h2>Обратный звонок</h2>
+				<hr>
+				<h3>
+					Введите свои данные и мы свяжемся с вами в течение 30 минут
+				</h3>
+				<form class="form-send" data-delay="999999999" action="hendler.php" method="post" role="form" data-form="send">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<input type="text" name="user" class="form-control my-input user" placeholder="Ваше имя" required/>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<input type="email" name="phone" class="form-control my-input phone" placeholder="Ваш телефон" required/>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<button type="submit" class="btn btn-success" name="from">перезвоните мне</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade call-modal" id="call-modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				<h2>оставить заявку</h2>
+				<hr>
+				<h3>
+					Введите свои данные и мы свяжемся с вами в течение 30 минут
+				</h3>
+				<form class="form-send" data-delay="999999999" action="hendler.php" method="post" role="form" data-form="send">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<input type="text" name="user" class="form-control my-input user" placeholder="Ваше имя" required/>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<input type="email" name="phone" class="form-control my-input phone" placeholder="Ваш телефон" required/>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<button type="submit" class="btn btn-success" name="from">Отправить заявку</button>
 							</div>
 						</div>
 					</div>
@@ -1008,11 +1301,27 @@
 		<div class="modal-content">
 			<div class="modal-body">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-				<h2>Заявка успешно<br>отправлена</h2>
+				<h2>заявка отправлена</h2>
+				<hr>
 				<h3>
-					Наш специалист свяжется с вами<br>в ближайшее время
+					В ближайшее время с вами свяжется наш менеджер
 				</h3>
-				<button type="button" class="btn btn-success close-btn" data-dismiss="modal" aria-label="Close">Вернуться назад</button>
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+<div class="modal fade call-modal" id="thx2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				<h2>Договор отправлен</h2>
+				<hr>
+				<h3>
+					В ближайшие 3 минуты вам на почту придет договор
+				</h3>
 			</div>
 		
 		</div>
@@ -1025,10 +1334,10 @@
 	<link href='assets/css/owl.carousel.css' rel='stylesheet' type='text/css'>
 	<link href='assets/css/lightbox.css' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-	<script type="text/javascript" src="assets/js/form.js"></script>
+	
 	<script type="text/javascript" src="assets/js/validator.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
 	<!--<script type="text/javascript" src="assets/js/typeahead.js"></script>-->
-	<script type="text/javascript" src="assets/js/main.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 </html>

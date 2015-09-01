@@ -1,7 +1,27 @@
 $(document).ready(function() {
+	send();
+	var form = $('[data-form="send"]');
+	form.ajaxForm(function() { 
+		// $('#call-modal3').modal('hide');
+		// $('#call-modal3').on('hidden.bs.modal', function (e) {
+		// 	$('#thx2').modal('show');
+		// });
+		// //$('#call-modal').modal('hide');
+		// $('#call-modal').on('hidden.bs.modal', function (e) {
+		// 	$('#thx').modal('show');
+		// });
+		// //$('#call-modal2').modal('hide');
+		// $('#call-modal2').on('hidden.bs.modal', function (e) {
+		// 	$('#thx').modal('show');
+		// });
+		
+		// $(form).resetForm(function(){
+		// 	$('#thx').modal('show');
+		// });
+	});
 	$('a.smooth').click(function(){
 		$('html, body').animate({
-			scrollTop: $( $.attr(this, 'href') ).offset().top - 80
+			scrollTop: $( $.attr(this, 'href') ).offset().top 
 		}, 1000);
 		return false;
 	});
@@ -51,7 +71,29 @@ $(document).ready(function() {
 		var scroll_r = $(this).scrollTop();
 		menuTop();
 	});
+
 	
+	  $(document).click(function(event) {
+		if ($(event.target).closest('[data-item="offcanvas-menu"]').length) {
+			$('body').addClass('active');
+			$('.my-offcanvas-trigger').addClass('active');
+			$('[data-item="offcanvas-menu"]').addClass('active');
+		}
+		else {
+			$('body').removeClass('active');
+			$('a.my-offcanvas-trigger').removeClass('active');
+			$('[data-item="offcanvas-menu"]').removeClass('active');
+		}
+		event.stopPropagation();
+	  });
+	
+	$('.my-offcanvas-trigger').click(function(event){
+		$('[data-item="offcanvas-menu"]').toggleClass('active');
+		$('body').toggleClass('active');
+		$(this).toggleClass('active');
+		event.stopPropagation();
+	});
+
 	// var myMap;
 	// ymaps.ready(init);
 	// function init () {
@@ -77,13 +119,28 @@ $(document).ready(function() {
 	// 		});
 	// 	myMap.geoObjects.add(myPlacemark);
 	// }
+	
 });
 
 
 function send(){
 	var form = $('[data-form="send"]');
 	form.ajaxForm(function() {
-		$('#call').modal('hide');
+		//$('#dog-form').modal('hide');
+		// $('#call-modal3').on('hidden.bs.modal', function (e) {
+		// 	$('#thx2').modal('show');
+		// });
+		// //$('#call-modal').modal('hide');
+		// $('#call-modal').on('hidden.bs.modal', function (e) {
+		// 	$('#thx').modal('show');
+		// });
+		// //$('#call-modal2').modal('hide');
+		// $('#call-modal2').on('hidden.bs.modal', function (e) {
+		// 	$('#thx').modal('show');
+		// });
+		$('#call-modal').modal('hide');
+		$('#call-modal2').modal('hide');
+		$('#call-modal3').modal('hide');
 		$('#thx').modal('show');
 		$(form).resetForm();
 	});
