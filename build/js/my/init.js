@@ -26,8 +26,16 @@ $(document).ready(function() {
 		return false;
 	});
 	var owlMain = $('[data-item="slider-main"]');
+	owlMain.on('initialized.owl.carousel', function(event) {
+		var items = event.item.count;
+		var item = event.item.index + 1 ;
+		var total = $('[data-item="total"]');
+		var carrent = $('[data-item="carrent"]');
+		total.html(items);
+		carrent.html(item);
+	});
 	owlMain.owlCarousel({
-		loop:true,
+		loop:false,
 		margin:0,
 		nav:true,
 		dots:true,
@@ -40,6 +48,14 @@ $(document).ready(function() {
 		  "<i class='my-arrow-right'></i>"
 		],
 		dots: true,
+	});
+	owlMain.on('changed.owl.carousel', function(event) {
+		var items = event.item.count;
+		var item = event.item.index + 1;
+		var total = $('[data-item="total"]');
+		var carrent = $('[data-item="carrent"]');
+		total.html(items);
+		carrent.html(item);
 	});
 	var form = $('[data-form="send"]');
 	$(form).validator().on('submit', function (e) {
