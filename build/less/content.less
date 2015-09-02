@@ -1,3 +1,4 @@
+
 body.active {
 	.header-lvl-2 {
 		transform:translateX(0px);
@@ -5,6 +6,9 @@ body.active {
 }
 body {
 	padding-right: 0 !important;
+	&.modal-open {
+		overflow: auto;
+	}
 }
 .content {
 	&.block-1{
@@ -638,6 +642,7 @@ body {
 				padding: 50px;
 				background: #fff;
 				color: #151515;
+				min-height: 668px;
 			}
 			img {
 				width: auto;
